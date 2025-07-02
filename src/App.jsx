@@ -1,19 +1,13 @@
 import React from 'react'
-// import'./index.css'
-// import { FaShoppingCart } from "react-icons/fa";
-
-// import { FaComputer } from "react-icons/fa6";
-import StyledCard from './Component/StyledCard'
-import ProfileCard from './Component/ProfileCard'
+import Friends from './Component/Friends'
 
 const App = () => {
   return (
-    <section>
-    {/* <FaShoppingCart />
-<FaComputer /> */}
-<StyledCard/>
-<ProfileCard/>
-    </section>
+    <div>
+      <h1>My friend list</h1>
+      <Friends/>
+    </div>
+    
   )
 }
 
