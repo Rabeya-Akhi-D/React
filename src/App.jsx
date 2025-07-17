@@ -1,32 +1,23 @@
-// import { useState } from "react";
-import ComponentOne from "./Component/ComponentOne";
-import ComponentTwo from "./Component/ComponentTwo";
-import CopyInput from "./Component/CopyInput";
-import Switcher from "./Component/Switcher";
-import Effect from "./Component/Effect";
-import Fetching from "./Component/Fetching";
-import BasicEffect from "./Component/BasicEffect";
-import CounterEffect from "./Component/CounterEffect";
+import React from "react";
+import { createContext } from "react";
+import ComponentA from "./Component/ComponentA";
+import ComponentB from "./Component/ComponentB";
+import ComponentC from "./Component/ComponentC";
 
-import FetchDataEffect from "./Component/FetchDataEffect";
+export const Data = createContext();
+export const Data1 = createContext();
 const App = () => {
-  //  const [count,setCount] = useState(0);
+  const name = "Akhi";
+  const age = 22;
   return (
     <div>
-{/* <ComponentOne count={count} onclickHandler={()=>setCount(count+1)}/>
-
-<ComponentTwo count={count} onclickHandler={()=>setCount(count-1)}/>
-<CopyInput/>
-<Switcher/>
-<Effect/> */}
-
-{/* <Fetching/> */}
-{/* <BasicEffect/> */}
-{/* <CounterEffect/> */}
-
-
+      <Data.Provider value={name}>
+        <Data1.Provider value={age}>
+          <ComponentA />
+          <ComponentC/>
+        </Data1.Provider>
+      </Data.Provider>
     </div>
-  )
-}
-
-export default App
+  );
+};
+export default App;
